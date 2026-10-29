@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - เทพธนากร คำลัยวงษ์ (ม.3/4)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Kanit & Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'Prompt', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes bounceShort {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-bounce-short {
+            animation: bounceShort 0.4s ease-in-out 1;
+        }
+    </style>
+</head>
+<body class="bg-[#FFF8F0] text-slate-700 font-sans min-h-screen flex flex-col justify-between selection:bg-pink-200 relative overflow-x-hidden">
+
+    <!-- Background Side Ornaments / Floating Cute Elements -->
+    <div class="fixed top-10 left-4 md:left-12 text-3xl md:text-4xl opacity-60 select-none pointer-events-none animate-bounce" style="animation-duration: 3s;">🌸</div>
+    <div class="fixed top-1/4 left-2 md:left-8 text-2xl md:text-3xl opacity-50 select-none pointer-events-none">✨</div>
+    <div class="fixed top-1/2 left-6 md:left-16 text-3xl md:text-4xl opacity-60 select-none pointer-events-none animate-pulse">☁️</div>
+    <div class="fixed bottom-20 left-4 md:left-10 text-2xl md:text-3xl opacity-60 select-none pointer-events-none">🧸</div>
+
+    <div class="fixed top-12 right-4 md:right-12 text-3xl md:text-4xl opacity-60 select-none pointer-events-none animate-bounce" style="animation-duration: 2.5s;">⭐</div>
+    <div class="fixed top-1/3 right-3 md:right-10 text-2xl md:text-3xl opacity-50 select-none pointer-events-none">💖</div>
+    <div class="fixed top-2/3 right-6 md:right-14 text-3xl md:text-4xl opacity-60 select-none pointer-events-none animate-pulse">🎀</div>
+    <div class="fixed bottom-16 right-4 md:right-8 text-2xl md:text-3xl opacity-60 select-none pointer-events-none">🍭</div>
+
+    <!-- Header / Navbar Minimal -->
+    <header class="py-6 text-center relative z-10">
+        <span class="inline-block px-4 py-1.5 bg-pink-100 text-pink-500 rounded-full text-sm font-semibold tracking-wide shadow-sm border border-pink-200">
+            ✨ MY PORTFOLIO ✨
+        </span>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-xl mx-auto px-4 w-full flex-grow flex flex-col items-center justify-center py-4 relative z-10">
+        
+        <!-- Profile Frame (กรอบรูปเปล่า) -->
+        <div class="relative w-44 h-44 mb-6">
+            <div class="w-full h-full rounded-3xl bg-pink-50 border-4 border-dashed border-pink-300 flex flex-col items-center justify-center text-pink-300 shadow-sm transition hover:scale-105 duration-300">
+                <i class="fa-solid fa-camera-retro text-4xl mb-2"></i>
+                <span class="text-xs font-medium text-pink-400">กรอบรูปถ่าย</span>
+            </div>
+            <!-- Decorative badges -->
+            <div class="absolute -top-2 -left-2 bg-pink-100 text-pink-500 rounded-full p-2 text-xs shadow border border-pink-200">
+                ✨
+            </div>
+            <div class="absolute -bottom-2 -right-2 bg-yellow-100 text-yellow-600 rounded-full p-2 text-xs shadow border border-yellow-200">
+                🎀
+            </div>
+        </div>
+
+        <!-- Student Info -->
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-slate-800">
+                ด.ช.เทพธนากร คำลัยวงษ์
+            </h1>
+            <p class="text-pink-500 font-medium text-base mt-1">
+                ชั้นมัธยมศึกษาปีที่ 3/4 &nbsp;|&nbsp; เลขที่ 4
+            </p>
+            <p class="text-slate-500 text-xs mt-2 bg-white px-3 py-1 rounded-full border border-pink-100 inline-block shadow-sm">
+                🏫 โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย พิษณุโลก
+            </p>
+        </div>
+
+        <!-- 4 Big Square Buttons Grid with Cute Frames -->
+        <div class="grid grid-cols-2 gap-4 w-full max-w-md">
+            
+            <!-- Button 1: ประวัติการศึกษา -->
+            <button onclick="openModal('ประวัติการศึกษา')" class="bg-white p-4 rounded-3xl border-2 border-pink-200 shadow-sm hover:shadow-md hover:border-pink-300 hover:-translate-y-1 transition-all flex flex-col items-center justify-center group aspect-square relative overflow-hidden">
+                <!-- Inner Decorative Mini Frame -->
+                <div class="w-20 h-20 rounded-2xl bg-pink-50 border-2 border-dashed border-pink-200 flex flex-col items-center justify-center mb-2 group-hover:scale-105 transition shadow-inner relative">
+                    <span class="text-3xl mb-1">🎓</span>
+                    <span class="text-[9px] text-pink-400 font-medium bg-pink-100/80 px-1.5 py-0.5 rounded-full">PHOTO</span>
+                    <span class="absolute -top-1 -right-1 text-xs">🎀</span>
+                </div>
+                <span class="font-semibold text-slate-700 text-sm">ประวัติการศึกษา</span>
+            </button>
+
+            <!-- Button 2: ผลการเรียน -->
+            <button onclick="openModal('ผลการเรียน')" class="bg-white p-4 rounded-3xl border-2 border-blue-200 shadow-sm hover:shadow-md hover:border-blue-300 hover:-translate-y-1 transition-all flex flex-col items-center justify-center group aspect-square relative overflow-hidden">
+                <!-- Inner Decorative Mini Frame -->
+                <div class="w-20 h-20 rounded-2xl bg-blue-50 border-2 border-dashed border-blue-200 flex flex-col items-center justify-center mb-2 group-hover:scale-105 transition shadow-inner relative">
+                    <span class="text-3xl mb-1">📊</span>
+                    <span class="text-[9px] text-blue-400 font-medium bg-blue-100/80 px-1.5 py-0.5 rounded-full">GPAX</span>
+                    <span class="absolute -top-1 -right-1 text-xs">⭐</span>
+                </div>
+                <span class="font-semibold text-slate-700 text-sm">ผลการเรียน</span>
+            </button>
+
+            <!-- Button 3: กิจกรรม -->
+            <button onclick="openModal('กิจกรรม')" class="bg-white p-4 rounded-3xl border-2 border-purple-200 shadow-sm hover:shadow-md hover:border-purple-300 hover:-translate-y-1 transition-all flex flex-col items-center justify-center group aspect-square relative overflow-hidden">
+                <!-- Inner Decorative Mini Frame -->
+                <div class="w-20 h-20 rounded-2xl bg-purple-50 border-2 border-dashed border-purple-200 flex flex-col items-center justify-center mb-2 group-hover:scale-105 transition shadow-inner relative">
+                    <span class="text-3xl mb-1">🎈</span>
+                    <span class="text-[9px] text-purple-400 font-medium bg-purple-100/80 px-1.5 py-0.5 rounded-full">ACTIVITY</span>
+                    <span class="absolute -top-1 -right-1 text-xs">🌸</span>
+                </div>
+                <span class="font-semibold text-slate-700 text-sm">กิจกรรม</span>
+            </button>
+
+            <!-- Button 4: เกียรติบัตร -->
+            <button onclick="openModal('เกียรติบัตร')" class="bg-white p-4 rounded-3xl border-2 border-amber-200 shadow-sm hover:shadow-md hover:border-amber-300 hover:-translate-y-1 transition-all flex flex-col items-center justify-center group aspect-square relative overflow-hidden">
+                <!-- Inner Decorative Mini Frame -->
+                <div class="w-20 h-20 rounded-2xl bg-amber-50 border-2 border-dashed border-amber-200 flex flex-col items-center justify-center mb-2 group-hover:scale-105 transition shadow-inner relative">
+                    <span class="text-3xl mb-1">🏆</span>
+                    <span class="text-[9px] text-amber-500 font-medium bg-amber-100/80 px-1.5 py-0.5 rounded-full">CERT</span>
+                    <span class="absolute -top-1 -right-1 text-xs">👑</span>
+                </div>
+                <span class="font-semibold text-slate-700 text-sm">เกียรติบัตร</span>
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-xs text-slate-400 relative z-10">
+        <p>♡ Portfolio - ด.ช.เทพธนากร คำลัยวงษ์ ♡</p>
+    </footer>
+
+    <!-- Pop-up Modal -->
+    <div id="popup-modal" class="fixed inset-0 bg-slate-900/30 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-3xl p-6 text-center max-w-xs w-full shadow-xl border-2 border-pink-100 animate-bounce-short">
+            <div class="text-4xl mb-2">🔒</div>
+            <h3 id="modal-title" class="font-bold text-slate-800 text-base mb-1">หมวดหมู่</h3>
+            <p class="text-slate-500 text-xs mb-4">ส่วนนี้กำลังเตรียมข้อมูลอยู่ครับ สามารถกลับมาดูได้เร็วๆ นี้!</p>
+            <button onclick="closeModal()" class="w-full py-2 bg-pink-400 hover:bg-pink-500 text-white font-medium rounded-xl text-xs transition shadow-sm">
+                ตกลง 💕
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function openModal(title) {
+            document.getElementById('modal-title').innerText = 'หัวข้อ: ' + title;
+            const modal = document.getElementById('popup-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('popup-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
